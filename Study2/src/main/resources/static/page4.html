@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정렬3</title>
+<style type="text/css">
+	* {margin: 0; padding: 0; box-sizing: border-box;}
+	ul {list-style-type: none; padding: 0;}
+	header {height: 100px; background-color: blue;}
+	main {background-color: aqua;}
+	footer {height: 100px; background-color: green;}
+	
+	header div.body {height: 100px; display: flex; justify-content: space-between; align-items:  center;}
+	header div div {height: 80px; width: 100px; background-color: orange;}
+	header ul {display: none; justify-content: space-between; align-items: center; width: 100%;}
+	#n1 {width: 100px; height: 80px; background-color: green;}
+	#n2 {width: 200px; height: 80px;}
+	#n2 ul {gap: 5px;}
+	#n2 ul li {width: 100px; height: 80px; background-color: green;}
+	
+	
+	main section {padding-top: 10px;}
+	main section div {height: 200px; background-color: orange;}
+	main section div:nth-child(2) {margin-top: 10px; height: 100px;}
+
+		.ul {display: grid; grid-template-columns: 1fr; gap: 10px;}
+		.li {height: 200px; background-color: white;}
+
+	@media only screen and (min-width: 834px) {
+		ul {grid-template-columns: 1fr 1fr;}
+		#h1 {position: absolute; left: calc(50% - (100px /2)); top: 10px;}
+		#h2 {display: none;}
+		header ul {display: flex; justify-content: space-between;}
+		
+	}
+	@media only screen and (min-width: 1080px) {
+		.ul {grid-template-columns: 1fr 200px 1fr;}
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div class="body">
+			<div id="h1"></div>
+			<div id="h2"></div>
+				<ul>
+					<li id="n1"></li>
+					<li id="n2">
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+				</li>
+			</ul>	
+		</div>
+	</header>
+	<main>
+		<section>
+			<div></div>
+			<div></div>
+		</section>
+		<section>
+			<ul class="ul">
+				<li class="li"></li>
+				<li class="li"></li>
+				<li class="li"></li>
+				<li class="li"></li>
+			</ul>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+</html>

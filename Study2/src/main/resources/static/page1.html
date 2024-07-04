@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	* {margin: 0; box-sizing: border-box;}
+	header {height: 100px; background-color: blue; display: none; padding-top: 10px;}	
+	main {height: calc(100vh - 200px); background-color: yellow; padding-top: 10px}
+	section{height: 200px;}
+	footer {height: 100px; background-color: green;}
+	
+	header div {height: 80px;}
+	#h {margin-left: 20px; margin-right: 20px}
+	#h1 {width: 100px; background-color: black; display: inline-block; float: left;}
+	#h2 {width: 50px; background-color: red; display: inline-block; float: right;}
+	
+	main section {padding-top: 10px;}
+	main section div {height: 200px; background-color: orange;}
+	main section div:nth-child(2) {margin-top: 10px; height: 100px;}
+	
+	ul {list-style-type: none; padding: 0;}
+	li {height: 100px; background-color: white; margin: 10px 0;}
+	
+	.bg {background-color: gray;}
+	.bg:hover { background-color: olive;}
+	@media only screen and (min-width: 834px) {
+		li {width: calc((100vw / 2) - 20px); display: inline-block; float: left; margin: 10px;}
+	}
+	@media only screen and (min-width: 1080px) {
+		li {width: calc((100vw / 3) - 20px);}
+	}
+	
+</style>
+<script type="text/javascript">
+	function e1(){
+		document.getElementsByTagName("header")[0].style.display = "block";
+	}
+	function e2(){
+		document.getElementsByTagName("header")[0].style.display = "none";
+	}
+	var check = true;
+	function load(){
+		if(check){
+		e1();	
+		} else{
+		e2();
+		}
+		check = !check;
+//	document.getElementsByTagName("section")[0].onmouseover = e1;
+//	document.getElementsByTagName("section")[0].onmouseout = e2;
+	}
+</script>
+</head>
+<body>
+	<header>
+		<div id="h"></div>
+		<div id="h1"></div>
+		<div id="h2"></div>
+	</header>
+	<main>
+		<section class="bg" onclick="load()"></section>
+		<section>
+			<div></div>
+			<div></div>
+		</section>
+		<section>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		
+		</section>
+		<section></section>
+		<section></section>
+	</main>
+	<footer></footer>
+
+</body>
+</html>
