@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HOME1</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(() => {
+	const list = [
+		{name: "thymeleaf 방식", url: "/v1/findList"},
+		{name: "jQuery 방식", url: "/v2/findList"},
+		{name: "AngularJS 방식", url: "/v3/"},
+		{name: "VUE 방식", url: "/v4/findList"}
+	];
+	$("ul").empty();
+	$.each(list, (index, item) => {
+		let html = `<li class="text-center">${item.name}</li>`;
+		$("ul").append(html);
+	});
+	$("li").on("click", (e) => {
+		var index = $("li").index(e.target);
+		location.href = list[index].url;
+	});
+});
+</script>
+<style type="text/css">
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style-type: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 50px 100px 0;}
+li {padding: 20px 0; border-radius: 10px;}
+li:hover {background-color: #0b57d0; cursor: pointer; color: white;}
+.text-center {text-align: center;}
+</style>
+</head>
+<body>
+	<h1 class="text-center">화면 목록</h1>
+	<ul></ul>	
+</body>
+</html>

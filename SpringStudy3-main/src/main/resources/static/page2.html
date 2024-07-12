@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정렬1</title>
+<style type="text/css">
+	* {margin: 0; box-sizing: border-box;}
+	header {height: 100px; background-color: blue; padding-top: 10px;}
+	main {background-color: yellow;}
+	footer {height: 100px; background-color: green; clear: both;}
+	
+	header div {height: 80px;}
+ 	#h {margin-left: 20px; margin-right: 20px;}
+	#h1 {width: 100px; background-color: black; display: inline-block; float: left;}
+	#h2 {width: 50px; background-color: red; display: inline-block; float: right;}
+	
+	main section {padding-top: 10px;}
+	main section div {height: 200px; background-color: orange;}
+	main section div:nth-child(2) {margin-top: 10px; height: 100px;}
+	
+	ul {list-style-type: none; padding: 0;}
+	li {height: 100px; background-color: white; margin: 10px 0;}
+	@media only screen and (min-width: 834px) {
+		li {width: calc((100vw / 2) - 20px); display: inline-block; float: left; margin: 10px;}
+	}
+	@media only screen and (min-width: 1080px) {
+		li {width: calc((100vw / 3) - 20px);}
+	}
+</style>
+</head>
+<body>
+	<header>
+		<div id="h">
+			<div id="h1"></div>
+			<div id="h2"></div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<div></div>
+			<div></div>
+		</section>
+		<section>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+</html>

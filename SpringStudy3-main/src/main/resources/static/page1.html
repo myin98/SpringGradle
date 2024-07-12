@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시맨틱 웹</title>
+<style type="text/css">
+	* {margin: 0;}
+	header {height: 40px; background-color: blue; display: none;}
+	main {background-color: yellow;}
+	section {height: 200px;}
+	footer {height: 100px; background-color: green;}
+	.bg {background-color: gray;}
+	.bg:hover { background-color: olive; }
+	@media only screen and (min-width: 834px) {
+		header {height: 100px; display: block;}
+	}
+</style>
+<script type="text/javascript">
+function e1() {
+	document.getElementsByTagName("header")[0].style.display = "block";
+}
+function e2() {
+	document.getElementsByTagName("header")[0].style.display = "none";
+}
+var check = true;
+function load() {
+	if(check) {
+		e1();	
+	} else {
+		e2();
+	}
+	check = !check;
+// 	document.getElementsByTagName("section")[0].onmouseover = e1;
+// 	document.getElementsByTagName("section")[0].onmouseout = e2;
+}
+</script>
+</head>
+<body>
+	<header></header>
+	<main>
+		<section class="bg" onclick="load()"></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+	</main>
+	<footer></footer>
+</body>
+</html>

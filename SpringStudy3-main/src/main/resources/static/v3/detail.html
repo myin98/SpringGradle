@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <h1 class="text-center bg-success text-dark bg-opacity-50">DETAIL</h1>
+    <form data-ng-submit="submit()">
+        <div class="mb-3 mt-3">
+          <label for="title" class="form-label">Title:</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required autocomplete="off" data-ng-model="data.title">
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Content:</label>
+          <input type="text" class="form-control" id="content" placeholder="Enter content" name="content" autocomplete="off" data-ng-model="data.content">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="submit">수정</button>
+            <button class="btn btn-success" data-ng-hide="data.accept" data-ng-click="onClick(1)">승인</button>
+            <button class="btn btn-warning" data-ng-show="data.accept" data-ng-click="onClick(0)">미승인</button>
+            <a class="btn btn-secondary" href="#!/">취소</a>
+        </div>
+    </form>
+</div>
