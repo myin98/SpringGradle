@@ -69,16 +69,16 @@ public class JsonController {
 		jsonDto.setStatus(false);
 		
 		log.info("NO : {}, type: {}" , no, type);
-		if(jsonMapper.delete(no) == 1) {
+		if((jsonMapper.good(no)) == 1) {
 			List<FileDTO> list = jsonMapper.findByType(type);
 			//if(list.size() > 0) {
 			jsonDto.setResult(list);
 			jsonDto.setMessage("파일 목록 성공");
 			jsonDto.setStatus(true);
-			//} else {
-				
-			//}
-		}
+			} else if (jsonMapper.bad(no) == 1){
+				jsonDto.setStatus(true);
+			}
+		
 		
 		return jsonDto;
 				

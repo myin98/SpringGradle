@@ -15,5 +15,7 @@ public class FileDTO {
 	private int type;
 	private String domain;
 	private String path;
+	private int good;
+	private int bad;
 
 }

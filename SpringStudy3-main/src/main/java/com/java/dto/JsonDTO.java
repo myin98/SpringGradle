@@ -15,4 +15,5 @@ public class JsonDTO {
 	private String message;
 	private Object result;
 	
+	
 }
